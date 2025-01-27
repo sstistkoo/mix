@@ -304,7 +304,7 @@
 
         <div class="grid grid-cols-2">
             <div>
-                <label>Aktuální L1</label>
+                <label>Aktuální L<span class="lLabel">1</span></label>
                 <input type="text" id="currentL" value="0" />
             </div>
             <div>
@@ -326,7 +326,7 @@
 
         <div class="grid grid-cols-2" style="margin-top: 20px;">
             <div>
-                <h3>Výsledek L1:</h3>
+                <h3>Výsledek L<span class="lLabel">1</span>:</h3>
                 <div class="large-result" id="finalResult">0</div>
             </div>
             <div>
@@ -498,6 +498,11 @@
             state.axis = e.target.value;
             document.querySelectorAll('.axisLabel').forEach(el => el.textContent = state.axis);
             document.getElementById('xControls').style.display = state.axis === 'X' ? 'inline' : 'none';
+
+            // Přidáme změnu L1/L2 označení
+            document.querySelectorAll('.lLabel').forEach(el => {
+                el.textContent = state.axis === 'X' ? '1' : '2';
+            });
 
             // Aktualizace labelu při změně osy
             document.getElementById('workpieceLabel').textContent =
