@@ -267,7 +267,7 @@
             </select>
             <select id="invertDifference">
                 <option value="normal">Normální</option>
-                <option value="invert">Invertovat</option>
+                <option value="invert" selected>Invertovat</option>
             </select>
             <button id="resetValues" class="reset-button">Vynulovat hodnoty</button>
             <div id="xControls" class="x-controls">
@@ -276,8 +276,8 @@
                     <option value="diameter">Průměr</option>
                 </select>
                 <select id="holeMode">
-                    <option value="outer">D1 - vnější</option>
-                    <option value="hole">D2 - díra</option>
+                    <option value="outer">D2 - vnější</option>
+                    <option value="hole">D1 - díra</option>
                 </select>
             </div>
         </div>
@@ -350,8 +350,8 @@
                         <input type="text" id="radiusResult" value="0" class="p-2 border rounded" />
                     </div>
                     <select id="absoluteHoleMode" class="p-2 border rounded">
-                        <option value="outer">D1 - vnější</option>
-                        <option value="hole">D2 - díra</option>
+                        <option value="outer">D2 - vnější</option>
+                        <option value="hole">D1 - díra</option>
                     </select>
                 </div>
 
@@ -421,7 +421,7 @@
             axis: 'X',
             isDiameter: false,
             isHole: false,
-            invertDifference: false,
+            invertDifference: true,  // změněno na true
             absoluteIsDiameter: false,
             absoluteIsHole: false
         };
